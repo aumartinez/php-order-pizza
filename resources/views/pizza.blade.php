@@ -7,7 +7,7 @@
         <div class="container bg-white">
           <div class="row pizza-item">
             <div class="col-sm-6 img-center pizza-pic">
-              <img src="/img/{{$pizza->prod_id}}.png" class="img-responsive" />
+              <img src="{{$pizza->prod_pic}}" class="img-responsive" />
             </div>
             <div class="col-sm-6">
               <div class="pizza-caption">

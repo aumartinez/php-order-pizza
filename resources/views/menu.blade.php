@@ -21,7 +21,7 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="menu-pic img-center">
-                      <img src="img/{{$pizza->prod_id}}.png" class="img-responsive" alt="{{$pizza->prod_name}}" />
+                      <img src="{{$pizza->prod_pic}}" class="img-responsive" alt="{{$pizza->prod_name}}" />
                     </div>
                   </div>
                   <div class="col-sm-6">
