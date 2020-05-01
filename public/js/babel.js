@@ -27,7 +27,7 @@ const Header = () => (
               <div id="navbar" className="navbar-collapse pull-right collapse mobile">
                 <ul className="nav navbar-nav pull-left">
                   <li className="active">
-                    <a href="/menu">Order online</a>
+                    <a href="#">Order online</a>
                   </li>
                   <li>
                     <a href="/about">About Us</a>
@@ -68,43 +68,43 @@ const Goodies = [
     id: "1",
     icon: "po po-pizza",
     name: "Pizza",
-    link: "/#"
+    link: "#"
   },
   {
     id: "2",
     icon: "po po-burger",
     name: "Burgers",
-    link: "/#"
+    link: "#"
   },
   {
     id: "3",
     icon: "po po-salads",
     name: "Salads",
-    link: "/#"
+    link: "#"
   },
   {
     id: "4",
     icon: "po po-tacos",
     name: "Tacos",
-    link: "/#"
+    link: "#"
   },
   {
     id: "5",
     icon: "po po-wraps",
     name: "Wraps",
-    link: "/#"
+    link: "#"
   },
   {
     id: "6",
     icon: "po po-fries",
     name: "Fries",
-    link: "/#"
+    link: "#"
   },
   {
     id: "7",
     icon: "po po-drinks",
     name: "Drinks",
-    link: "/#"
+    link: "#"
   },
 ];
 
@@ -199,21 +199,21 @@ ReactDOM.render(
 const HomePizzas = [
   {
     id: "1",
-    pic: "img/pizza-01.png",
+    pic: "img/pizza-08.png",
     title: "Summer Pizza",
     caption: "Shrimp, Red Capsicum, Green Capsicum, Onion, Chilli flakes, Lemmon Pepper",
     link: "/pizza/summerpizza"
   },
   {
     id: "2",
-    pic: "img/pizza-02.png",
+    pic: "img/pizza-01.png",
     title: "Apricot Chicken",
-    caption: "Crispy bacon, tasky ham, pineapple, onion and stretchy mozzaerlla, finished with BBQ swirl.",
+    caption: "Crispy bacon, tasky ham, pineapple, onion and stretchy mozzarella, finished with BBQ swirl.",
     link: "/pizza/apricot"
   },
   {
     id: "3",
-    pic: "img/pizza-03.png",
+    pic: "img/pizza-07.png",
     title: "Pepperoni Pizza",
     caption: "Extra-Virgin olive oil, garlic, mozzarella cheese, onions, mushrooms, green olives, black olives, fresh tomatoes.",
     link: "/pizza/pepperoni"
