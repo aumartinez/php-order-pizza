@@ -344,7 +344,7 @@ if (document.getElementById("promotion")){
 //Today pizza
 
 const TodayPizza = {
-  id: "",
+  id: "1",
   pic: "img/pizza-03.png",
   title: "Pepperoni Pizza",
   caption: "Extra-Virgin olive oil, garlic, mozzarella cheese, onions, mushrooms, green olives, black olives, fresh tomatoes.",
