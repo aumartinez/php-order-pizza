@@ -4,6 +4,32 @@
 
 @section('body')
   <div class="pizza-wrapper bg-pizza">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="col-xs-12">
+          <nav class="breadcrumb" role="navigation">
+            <ul class="list-inline">
+              <li>
+                <a href="/" title="Home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/menu" title="Menu">
+                  Menu
+                </a>
+              </li>
+              <li>
+                <a href="/pizza/{{$pizza->prod_id}}" title="Apricot Chicken">
+                  {{$pizza->prod_name}}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+          
         <div class="container bg-white">
           <div class="row pizza-item">
             <div class="col-sm-6 img-center pizza-pic">
