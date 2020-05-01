@@ -1,7 +1,5 @@
 @extends('temp.master')
 
-@section('title', 'Welcome')
-
 @section('body')
       <div class="top-banner bg-primary mobile collapse">
         <div class="container">
@@ -112,7 +110,7 @@
 
 @section('map')
     <div class="bottom-btn text-center">
-      <a href="/#map" data-toggle="collapse" data-target="#map" class="btn btn-primary">Find Us!</a>
+      <a href="/#map" data-toggle="collapse" data-target="#map" class="btn btn-primary">Find Us</a>
     </div>
     
     <div id="map" class="hidden-map collapse">
