@@ -49,7 +49,7 @@
                   <span>€</span><span>{{$pizza->prod_price}}</span>
                 </p>
                 
-                <form id="add-item" action="/cart" method="post">
+                <form id="add-item" action="/add" method="post">
                   <div class="pizza-qty">
                     <div class="round-item">
                       <span id="minus-1"> - </span>
