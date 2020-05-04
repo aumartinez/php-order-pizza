@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::middleware('ssl')->group(function() {
+    // All your routes here
+    
+    Route::get('/', function () {
     return view('home');
 });
 
@@ -33,3 +36,7 @@ Route::post('/update', 'CartController@update_cart');
 Route::post('/delete', 'CartController@remove_item');
 Route::post('/cart/order', 'CartController@store_order');
 Route::post('/checkout', 'OrderController@thankyou');
+
+});
+
+
