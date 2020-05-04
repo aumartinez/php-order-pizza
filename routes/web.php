@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('ssl')->group(function() {
     // All your routes here
-    
-    Route::get('/', function () {
+Route::post('/add', 'CartController@store_item');
+Route::post('/update', 'CartController@update_cart');
+Route::post('/delete', 'CartController@remove_item');
+Route::post('/cart/order', 'CartController@store_order');
+Route::post('/checkout', 'OrderController@thankyou');
+
+});
+
+Route::get('/', function () {
     return view('home');
 });
 
@@ -30,13 +37,3 @@ Route::get('/delete', 'CartController@redirect_to');
 Route::get('/cart/order', 'CartController@store_order');
 Route::get('/order', 'OrderController@place_order');
 Route::get('/checkout', 'OrderController@thankyou');
-
-Route::post('/add', 'CartController@store_item');
-Route::post('/update', 'CartController@update_cart');
-Route::post('/delete', 'CartController@remove_item');
-Route::post('/cart/order', 'CartController@store_order');
-Route::post('/checkout', 'OrderController@thankyou');
-
-});
-
-
