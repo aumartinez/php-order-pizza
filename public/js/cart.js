@@ -88,7 +88,7 @@ function cartcalc() {
 function ajaxhandler() {
   $(".update-control").on("click", function(e){
       
-     let url = "/update";
+     let url = "https://php-order-pizza.herokuapp.com/update";
      let elem_cont = e.target.offsetParent;
      let mess = elem_cont.querySelector(".mess");
      let $mess = $(mess).addClass("dummy");
