@@ -50,7 +50,7 @@
             </div>
           </div>
           
-          @if(!session('cart') || count(session('cart')) == 0 )
+          @if(!session('cart') || count(session('cart')) == 0 || 'list' == null)
           <!-- Empty cart -->
           <div class="col-xs-12 cart-cont empty">
             <h1 class="text-center">
@@ -65,12 +65,12 @@
           </div>
           @endif
           
-          @if(session('cart') && count(session('cart')) > 0)
+          @if(session('cart') && count(session('cart')) > 0 && 'list' != null)
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
                   <h1 class="text-center cart-title">
-                    You shopping cart
+                    Your shopping cart
                   </h1>
                 </div>
               </div>
@@ -78,7 +78,7 @@
             
             <form id="cart-form" action="/cart/order" method="post" class="cart-wrapper">
             @csrf
-                <input id="order-number" name="order-number" type="hidden" value="0001" />
+                <input id="order-number" name="order-number" type="hidden" value="{{$list[0]}}" />
                 <div class="col-xs-12 cart-cont">
                     <div class="row" id="cart">
                       <!-- add items -->
@@ -101,6 +101,6 @@
 
 @section('lastscript')
   <script type="application/ld+json">
-   {!!$decoded!!}
+   {!!$list[1] ?? '[]'!!}
   </script>
 @endsection

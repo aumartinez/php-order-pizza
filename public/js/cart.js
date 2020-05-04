@@ -2,13 +2,14 @@
 "use strict";
 
 window.addEventListener("load", function(){
-  let start = setTimeout(cartcalc, 100);
+  let start = setTimeout(cartcalc, 2000);
 },false);
 
 function cartcalc() {
   //Cart alert
   
   calc_subtotal();
+  ajaxhandler();
   
   let minus = document.querySelectorAll(".order-items .minus");
   let numbers = document.querySelectorAll(".order-items .numbers");
@@ -84,11 +85,9 @@ function cartcalc() {
 
 //AJAX handler
 
-$(document).ready(function(){
-  
-  let start = setTimeout(function(){    
-    
-    $(".update-control").on("click", function(e){
+function ajaxhandler() {
+  $(".update-control").on("click", function(e){
+      
      let url = "/update";
      let elem_cont = e.target.offsetParent;
      let mess = elem_cont.querySelector(".mess");
@@ -114,6 +113,4 @@ $(document).ready(function(){
          setTimeout(function(){$mess.removeClass("active");},2000);
        });
    }); 
-  }, 2000);
-   
- });
+}

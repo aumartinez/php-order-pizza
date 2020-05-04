@@ -32,7 +32,7 @@ function ShortList(props) {
         </Col>
         <Col sm={6}>
           <h3>
-           {item.prod_name};
+           {item.prod_name}
           </h3>
           <div className="item-description">
             <p>
@@ -126,7 +126,8 @@ function ShortList(props) {
 if (document.getElementById("cart") && jsonList.product.length > 0){
   ReactDOM.render(
     <ShortList cart = {jsonList} />,
-    document.getElementById("cart")
+    document.getElementById("cart"),
+    cartcalc(),
   );  
 }
 
