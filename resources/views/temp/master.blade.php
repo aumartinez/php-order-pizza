@@ -25,6 +25,8 @@
     <![endif]-->
 	</head>
   <body class="bg-body">
+    @section('firstscript')
+    @show
     <script src="/js/loader.js"></script>
     <!-- HTML start -->
     <header class="bg-primary">
@@ -56,6 +58,10 @@
     <script type="text/javascript" src="/js/react-bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <script type="text/babel" src="/js/babel.js"></script>
+    @section('customscripts')
+    @show
     <script type="text/javascript" src="/js/main.js"></script>
+    @section('lastscript')
+    @show
   </body>  
 </html>

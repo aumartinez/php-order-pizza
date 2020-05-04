@@ -4,6 +4,21 @@
 window.addEventListener("load", run, false);
 
 function run() {
+  //Cart alert
+  let start = setTimeout(function(){
+    let items = parseInt(document.getElementById("ajax").innerText);
+    let bell = document.querySelector("#bell i");
+    
+    if (items != 0) {    
+      addClass(bell, "active");
+    }
+    else {
+      removeClass(bell, "active");
+    }
+  }, 2000);
+  
+  
+  //Map button
   let map_btn = document.getElementById("map-btn");
   
   if (map_btn != null) {
@@ -19,12 +34,13 @@ function run() {
     }, false);
   }
   
+  //Add item function
   let prod_form = document.getElementById("add-item");
   
   if(prod_form != null) {
     let minus_btn = document.getElementById("minus-1");
     let plus_btn = document.getElementById("plus-1");    
-    let value_input = document.getElementById("item-qty");
+    let value_input = document.getElementById("item_qty");
     
     minus_btn.addEventListener("click", minus_handler, false);
     plus_btn.addEventListener("click", plus_handler, false);
@@ -74,4 +90,31 @@ function run() {
     
   }
   
+  function addClass (elem, myClass) {
+    if (elem.classList) {
+      elem.classList.add(myClass);
+    }
+    else {
+      let arr = elem.className.split(" ");
+      let i = arr.indexOf(myClass);
+      if (i == -1) {
+        arr.push(myClass);
+        elem.className = arr.join(" ");
+      }
+    }
+  }
+
+  function removeClass (elem, myClass) {
+    if (elem.classList) {
+      elem.classList.remove(myClass);
+    }
+    else {
+      let arr = elem.className.split(" ");
+      let i = arr.indexOf(myClass);
+      if (i >= 0) {
+        arr.splice(i, 1);
+        elem.className = arr.join(" ");
+      }
+    }
+  }
 }

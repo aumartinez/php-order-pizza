@@ -29,8 +29,4 @@ class ProductsController extends Controller
     public function cart() {
       return view('cart');
     }
-    
-    public function add_item($id) {
-      
-    }
 }

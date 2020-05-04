@@ -3,7 +3,7 @@
 @section('title', 'Welcome')
 
 @section('body')
-      <div class="top-banner bg-primary mobile collapse">
+      <div class="top-banner bg-primary">
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
@@ -107,6 +107,9 @@
             </div>
           </div><!-- /.row -->
         </div>
+      </div>
+      
+      <div id="ajax">
       </div>
 @endsection
 

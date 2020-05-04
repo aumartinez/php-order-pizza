@@ -19,3 +19,12 @@ Route::get('/', function () {
 
 Route::get('/menu', 'ProductsController@index');
 Route::get('/pizza/{id}', 'ProductsController@pizza');
+Route::get('/ws/items', 'CartController@get_items');
+Route::get('/cart', 'CartController@index');
+Route::get('/add', 'CartController@redirect_to');
+Route::get('/update', 'CartController@redirect_to');
+Route::get('/delete', 'CartController@redirect_to');
+
+Route::post('/add', 'CartController@store_item');
+Route::post('/update', 'CartController@update_cart');
+Route::post('/delete', 'CartController@remove_item');
