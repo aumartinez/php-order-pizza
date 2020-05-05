@@ -148,7 +148,7 @@ function deleteItem(id) {
        "prod_id": $('#'+ id + ' .hidden-product').val()       
      }
      
-  let url = "/delete";
+  let url = "https://php-order-pizza.herokuapp.com/delete";
   
   let posting = $.post(url, data); 
    posting.done(function(response){         
