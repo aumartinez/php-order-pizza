@@ -103,7 +103,7 @@ class CartController extends Controller
       $cart = session()->get('cart');
       
       if(!$cart){
-        return redirect('/');
+        return redirect('https://php-order-pizza.herokuapp.com/update');
       }
       else {
         $item = $request->input('prod_id');
@@ -136,7 +136,7 @@ class CartController extends Controller
     }
     
     public function redirect_to() {
-      return redirect('/');
+      return redirect('https://php-order-pizza.herokuapp.com/update');
     }
     
     public function store_order() {

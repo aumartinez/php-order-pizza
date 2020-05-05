@@ -86,9 +86,8 @@ function cartcalc() {
 //AJAX handler
 
 function ajaxhandler() {
-  $(".update-control").on("click", function(e){
-      
-     let url = "https://php-order-pizza.herokuapp.com/update";
+  $(".update-control").on("click", function(e){      
+     
      let elem_cont = e.target.offsetParent;
      let mess = elem_cont.querySelector(".mess");
      let $mess = $(mess).addClass("dummy");
@@ -98,7 +97,8 @@ function ajaxhandler() {
        "prod_id": elem_cont.querySelector(".hidden-product").value,
        "item_qty": elem_cont.querySelector(".hidden-qty").value
      }
-              
+     
+     let url = "https://php-order-pizza.herokuapp.com/update";
      let posting = $.post(url, data);
      
      posting.done(function(response){         
