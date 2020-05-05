@@ -40,7 +40,7 @@
                 </li>
                 <li>
                   <span>2</span>
-                  <span>Add Shipping</span>
+                  <span>Add Delivery</span>
                 </li>
                 <li>
                   <span>3</span>
