@@ -156,12 +156,10 @@ function deleteItem(id) {
      if($(".order-items > div").length == 0) {
        window.location.reload();
      }
-     cartcalc();     
+     cartcalc();
    }).fail(function(response){
      $("#mess").addClass("alert-danger");
      $("#mess").addClass("active");
      $("#mess").text("Server error, try again");
    });
 }
-
-

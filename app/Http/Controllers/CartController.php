@@ -113,14 +113,14 @@ class CartController extends Controller
         session()->put('cart', $cart);
       }
       
-      return redirect('https://php-order-pizza.herokuapp.com/');
+      return redirect('/');
     }
     
     public function remove_item(Request $request) {
       $cart = session()->get('cart');
       
       if(!$cart) {
-        return redirect('https://php-order-pizza.herokuapp.com/');
+        return redirect('/');
       }
       else {
         $item = $request->input('prod_id');
@@ -130,13 +130,13 @@ class CartController extends Controller
         unset($temp[$item]);
         session()->put('cart', $temp);
         
-        return redirect('https://php-order-pizza.herokuapp.com/');        
+        return redirect('/');        
       }
       
     }
     
     public function redirect_to() {
-      return redirect('https://php-order-pizza.herokuapp.com/');
+      return redirect('/');
     }
     
     public function store_order() {
@@ -161,6 +161,6 @@ class CartController extends Controller
           );        
       }
       
-      return redirect('https://php-order-pizza.herokuapp.com/order');
+      return redirect('/order');
     }
 }
