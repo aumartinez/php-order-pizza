@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\DB;
 
+protected $home_url = "https://php-order-pizza.herokuapp.com/";
+
 class CartController extends Controller
 {
     public function index() {
@@ -103,7 +105,7 @@ class CartController extends Controller
       $cart = session()->get('cart');
       
       if(!$cart){
-        return redirect('https://php-order-pizza.herokuapp.com/');
+        return redirect($this->home_url);
       }
       else {
         $item = $request->input('prod_id');
@@ -113,14 +115,14 @@ class CartController extends Controller
         session()->put('cart', $cart);
       }
       
-      return redirect('https://php-order-pizza.herokuapp.com/');
+      return redirect($this->home_url);
     }
     
     public function remove_item(Request $request) {
       $cart = session()->get('cart');
       
       if(!$cart) {
-        return redirect('https://php-order-pizza.herokuapp.com/');
+        return redirect($this->home_url);
       }
       else {
         $item = $request->input('prod_id');
@@ -130,13 +132,13 @@ class CartController extends Controller
         unset($temp[$item]);
         session()->put('cart', $temp);
         
-        return redirect('https://php-order-pizza.herokuapp.com/');      
+        return redirect($this->home_url);      
       }
       
     }
     
     public function redirect_to() {
-      return redirect('https://php-order-pizza.herokuapp.com/');
+      return redirect($this->home_url);
     }
     
     public function store_order() {
