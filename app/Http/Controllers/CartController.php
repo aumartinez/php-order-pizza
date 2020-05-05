@@ -113,7 +113,6 @@ class CartController extends Controller
         session()->put('cart', $cart);
       }
       
-      return redirect('/');
     }
     
     public function remove_item(Request $request) {
@@ -130,7 +129,6 @@ class CartController extends Controller
         unset($temp[$item]);
         session()->put('cart', $temp);
         
-        return redirect('/');      
       }
       
     }
