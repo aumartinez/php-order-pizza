@@ -130,13 +130,13 @@ class CartController extends Controller
         unset($temp[$item]);
         session()->put('cart', $temp);
         
-        return redirect('/');        
+        return redirect('https://php-order-pizza.herokuapp.com/');      
       }
       
     }
     
     public function redirect_to() {
-      return redirect('https://php-order-pizza.herokuapp.com/);
+      return redirect('https://php-order-pizza.herokuapp.com/');
     }
     
     public function store_order() {
