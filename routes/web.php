@@ -13,20 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::group(['scheme' => 'https'], function () {
+    Route::get('/', function () {
     return view('home');
+    });
+    
+    Route::get('/menu', 'ProductsController@index');
+    Route::get('/pizza/{id}', 'ProductsController@pizza');
+    Route::get('/ws/items', 'CartController@get_items');
+    Route::get('/cart', 'CartController@index');
+    Route::get('/add', 'CartController@redirect_to');
+    Route::get('/update', 'CartController@redirect_to');
+    Route::get('/delete', 'CartController@redirect_to');
+    Route::get('/cart/order', 'CartController@store_order');
+    Route::get('/order', 'OrderController@place_order');
+    Route::get('/checkout', 'OrderController@thankyou');
 });
-
-Route::get('/menu', 'ProductsController@index');
-Route::get('/pizza/{id}', 'ProductsController@pizza');
-Route::get('/ws/items', 'CartController@get_items');
-Route::get('/cart', 'CartController@index');
-Route::get('/add', 'CartController@redirect_to');
-Route::get('/update', 'CartController@redirect_to');
-Route::get('/delete', 'CartController@redirect_to');
-Route::get('/cart/order', 'CartController@store_order');
-Route::get('/order', 'OrderController@place_order');
-Route::get('/checkout', 'OrderController@thankyou');
 
 Route::post('/add', 'CartController@store_item');
 Route::post('/update', 'CartController@update_cart');
