@@ -130,7 +130,6 @@ class CartController extends Controller
         unset($temp[$item]);
         session()->put('cart', $temp);
         
-        return redirect('/');
       }
       
     }

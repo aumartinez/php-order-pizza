@@ -104,7 +104,7 @@ function ajaxhandler() {
      posting.done(function(response){         
          $mess.addClass("alert-success");
          $mess.addClass("active");
-         $mess.text("Item updated");
+         $mess.text("Item updated");         
          setTimeout(function(){$mess.removeClass("active");},2000);
        }).fail(function(response){
          $mess.addClass("alert-danger");
