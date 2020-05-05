@@ -136,7 +136,7 @@ class CartController extends Controller
     }
     
     public function redirect_to() {
-      return redirect('https://php-order-pizza.herokuapp.com/update');
+      return redirect('https://php-order-pizza.herokuapp.com/);
     }
     
     public function store_order() {
