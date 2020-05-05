@@ -29,7 +29,7 @@ $(document).ready(function(){
          setTimeout(function(){$("#mess").removeClass("active");}, 2000);
        });
        
-       let get_url = "https://php-order-pizza.herokuapp.com/ws/items";
+       let get_url = "/ws/items";
        
        setTimeout(function(){
          $.get(get_url, function(data, status){
