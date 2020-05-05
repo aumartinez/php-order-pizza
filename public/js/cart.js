@@ -98,7 +98,7 @@ function ajaxhandler() {
        "item_qty": elem_cont.querySelector(".hidden-qty").value
      }
      
-     let url = "https://php-order-pizza.herokuapp.com/update";
+     let url = "/update";
      let posting = $.post(url, data);
      
      posting.done(function(response){         

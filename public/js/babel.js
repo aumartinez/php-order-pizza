@@ -73,7 +73,7 @@ function getItems() {
       document.getElementById("ajax").innerText = this.responseText;
     }
   };
-  xhttp.open("GET", "https://php-order-pizza.herokuapp.com/ws/items", true);
+  xhttp.open("GET", "/ws/items", true);
   xhttp.send();
 }
 
