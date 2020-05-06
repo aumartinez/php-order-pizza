@@ -852,12 +852,15 @@ h1.menu-title {
 }
 
 .cart-wrapper .round-item .number {
-  float: none;  
-  height: auto;  
-  display: inline-block;   
+  float: none;
+  height: auto;
+  display: block;
   text-align: center;
-  padding: 0 8px;
-  line-height: 35px;
+  padding: 0;
+  line-height: 35px;  
+  width: 35px;
+  height: 35px;
+  float: left;
 }
 
 .cart-wrapper .round-item .plus {
