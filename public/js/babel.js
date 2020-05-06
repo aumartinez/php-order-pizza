@@ -34,7 +34,7 @@ const Header = () => (
                     <a href="/menu">Order online</a>
                   </li>
                   <li>
-                    <a href="/about">About Us</a>
+                    <a href="#">About Us</a>
                   </li>                
                 </ul>
               
