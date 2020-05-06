@@ -22,6 +22,7 @@ $(document).ready(function(){
          $("#mess").addClass("active");
          $("#mess").text("Added to cart");
          setTimeout(function(){$("#mess").removeClass("active");}, 2000);
+         run();
        }).fail(function(response){
          $("#mess").addClass("alert-danger");
          $("#mess").addClass("active");
