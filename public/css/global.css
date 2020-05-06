@@ -619,6 +619,10 @@ footer .copyright {
 
 /* Bottom map */
 
+#map {
+  overflow-x: hidden;
+}
+
 .bottom-btn {
   position: relative;
 }
