@@ -986,6 +986,16 @@ h1.menu-title {
     background-color: #fff;
   }
   
+  .navbar-default .navbar-collapse {
+    border: none;  
+    left: 0px;
+    right: 0px;
+    position: absolute;  
+    background: #C00A27;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
   #navbar.collapse.in {
     padding-bottom: 30px;
     overflow: visible;
